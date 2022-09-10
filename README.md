@@ -22,7 +22,7 @@
 3. Создайте в папке Templates свой темплейт **yootheme_CHILD** (имя дочернего темплейта может быть любое, но необходимо придерживаться правила для YOOtheme-конструктора):
 >     templates/yootheme_CHILD/
 4. Внутри **yootheme_CHILD** добавьте папку **html**:
->     templates/yootheme_CHILD/builder/
+>     templates/yootheme_CHILD/html/
 5. Скопируйте в  папку **html** папку **com_jshopping** со всем её содержимым.
 ## Использование
 JoomShopping автоматически будет использовать новый темплейт.
