@@ -1,0 +1,18 @@
+.tm-qty input.uk-form-width-small{width: 80px;}
+.tm-checkout-menu{}
+
+.tm-price{width: 140px;padding-left: 50px;}
+.tm-quantity{width: 80px;padding-left: 50px;}
+
+.uk-grid-divider>:not(.uk-first-column)::before {left: 25px;}
+
+.tm_manufacturer_logo {width: 120px;}
+
+.tm-img-product .uk-label{background: none;}
+.tm-filter .uk-form-label{width: 130px;}
+.tm-filter .uk-form-controls{margin-left: 145px;}
+.tm-filter .uk-form-width-small{width: 80px;}
+.tm-filter .uk-width-small{width: 110px;}
+
+.tm-image-card {min-height: 140px;}
+.tm-image-product {height: 200px;}
