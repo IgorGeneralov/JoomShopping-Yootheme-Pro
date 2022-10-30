@@ -24,5 +24,6 @@
 4. Внутри **yootheme_CHILD** добавьте папку **html**:
 >     templates/yootheme_CHILD/html/
 5. Скопируйте в  папку **html** папку **com_jshopping** со всем её содержимым.
+6. В настройках стиля **YOOtheme** Settings/Advanced/ChildTheme укажите, что хотите использовать свою тему **yootheme_CHILD**.
 ## Использование
 JoomShopping автоматически будет использовать новый темплейт.
