@@ -62,29 +62,31 @@ defined('_JEXEC') or die;
                         <div class="uk-width-small uk-text-break">
                             <div class="el-title uk-margin-remove">
                                 <strong><?php print JText::_('JSHOP_FINISH_DELIVERY_ADRESS')?></strong>:
-                                <span>
-                                    <?php if ($this->delivery_info['firma_name']) {
-                                        print $this->delivery_info['firma_name'].", ";
-                                    }?>
-                                    <?php print $this->delivery_info['f_name'] ?>
-                                    <?php print $this->delivery_info['l_name'] ?>,
-                                    <?php if ($this->delivery_info['street'] && $this->delivery_info['street_nr']) {
-                                        print $this->delivery_info['street']." ".$this->delivery_info['street_nr'].",";
-                                    }?>
-                                    <?php if ($this->delivery_info['street'] && !$this->delivery_info['street_nr']) {
-                                        print $this->delivery_info['street'].",";
-                                    }?>
-                                    <?php if ($this->delivery_info['home'] && $this->delivery_info['apartment']) {
-                                        print $this->delivery_info['home']."/".$this->delivery_info['apartment'].",";
-                                    }?>
-                                    <?php if ($this->delivery_info['home'] && !$this->delivery_info['apartment']) {
-                                        print $this->delivery_info['home'].",";
-                                    }?>
-                                    <?php if ($this->delivery_info['state']) {
-                                        print $this->delivery_info['state'].",";
-                                    } ?>
-                                    <?php print $this->delivery_info['zip']." ".$this->delivery_info['city']." ".$this->delivery_info['country']?>
-                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="el-content uk-panel">
+                                <?php if ($this->delivery_info['firma_name']) {
+									print $this->delivery_info['firma_name'].", ";
+								}?>
+                                <?php print $this->delivery_info['f_name'] ?>
+                                <?php print $this->delivery_info['l_name'] ?>,
+                                <?php if ($this->delivery_info['street'] && $this->delivery_info['street_nr']) {
+									print $this->delivery_info['street']." ".$this->delivery_info['street_nr'].",";
+								}?>
+                                <?php if ($this->delivery_info['street'] && !$this->delivery_info['street_nr']) {
+									print $this->delivery_info['street'].",";
+								}?>
+                                <?php if ($this->delivery_info['home'] && $this->delivery_info['apartment']) {
+									print $this->delivery_info['home']."/".$this->delivery_info['apartment'].",";
+								}?>
+                                <?php if ($this->delivery_info['home'] && !$this->delivery_info['apartment']) {
+									print $this->delivery_info['home'].",";
+								}?>
+                                <?php if ($this->delivery_info['state']) {
+									print $this->delivery_info['state'].",";
+								} ?>
+                                <?php print $this->delivery_info['zip']." ".$this->delivery_info['city']." ".$this->delivery_info['country']?>
                             </div>
                         </div>
                     </div>
@@ -97,16 +99,20 @@ defined('_JEXEC') or die;
                         <div class="uk-width-small uk-text-break">
                             <div class="el-title uk-margin-remove">
                                 <strong><?php print JText::_('JSHOP_FINISH_SHIPPING_METHOD')?></strong>:
-                                <span><?php print $this->sh_method->name?></span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="el-content uk-panel">
+                                <?php print $this->sh_method->name?></span>
                                 <?php if ($this->delivery_time) {?>
-                                <div class="delivery_time"><strong><?php print JText::_('JSHOP_DELIVERY_TIME')?></strong>:
-                                    <span><?php print $this->delivery_time?></span>
-                                </div>
+                                	<div class="delivery_time"><strong><?php print JText::_('JSHOP_DELIVERY_TIME')?></strong>:
+                                    	<span><?php print $this->delivery_time?></span>
+                                	</div>
                                 <?php }?>
                                 <?php if ($this->delivery_date) {?>
-                                <div class="delivery_date"><strong><?php print JText::_('JSHOP_DELIVERY_DATE')?></strong>:
-                                    <span><?php print $this->delivery_date?></span>
-                                </div>
+                                	<div class="delivery_date"><strong><?php print JText::_('JSHOP_DELIVERY_DATE')?></strong>:
+                                    	<span><?php print $this->delivery_date?></span>
+                                	</div>
                                 <?php }?>
                             </div>
                         </div>
@@ -119,9 +125,12 @@ defined('_JEXEC') or die;
                     <div class="uk-child-width-expand uk-grid-small uk-grid" uk-grid>
                         <div class="uk-width-small uk-text-break">
                             <div class="el-title uk-margin-remove">
-                                <strong><?php print JText::_('JSHOP_FINISH_PAYMENT_METHOD')?>
-                                </strong>: <span>
-                                    <?php print $this->payment_name ?></span>
+                                <strong><?php print JText::_('JSHOP_FINISH_PAYMENT_METHOD')?></strong>:
+                            </div>
+                        </div>
+                        <div>
+                            <div class="el-content uk-panel">
+	                            <?php print $this->payment_name ?>
                             </div>
                         </div>
                     </div>
