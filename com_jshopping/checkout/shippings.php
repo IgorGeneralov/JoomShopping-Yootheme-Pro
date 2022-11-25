@@ -35,7 +35,7 @@ defined('_JEXEC') or die();
                         </div>
 
                         <?php if ($shipping->image) {?>
-                        <span class="">
+                        <span class="tm-payment-shipping">
                             <img src="<?php print $shipping->image?>" alt="<?php print htmlspecialchars($shipping->name)?>" />
                         </span>
                         <?php }?>
