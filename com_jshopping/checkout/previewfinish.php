@@ -148,7 +148,7 @@ defined('_JEXEC') or die;
 
             <?php if ($this->config->display_agb) {?>
             <div class="">
-                <input type="uk-checkbox" name="agb" id="agb" type="checkbox" class="uk-margin-small-right" />
+                <input type="checkbox" name="agb" id="agb" class="uk-checkbox uk-margin-small-right" />
                 <span class="uk-text-small ">
                     <?php print JText::_('JSHOP_CONFIRM')?>
                 </span>
@@ -166,7 +166,7 @@ defined('_JEXEC') or die;
 
             <?php if ($this->no_return) {?>
             <div class="">
-                <input type="uk-checkbox" name="no_return" id="no_return" />
+                <input type="checkbox" class="uk-checkbox" name="no_return" id="no_return" />
                 <?php print JText::_('JSHOP_NO_RETURN_DESCRIPTION')?>
             </div>
             <?php }?>
