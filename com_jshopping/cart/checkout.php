@@ -12,7 +12,7 @@ defined('_JEXEC') or die();
         <table class="uk-table uk-table-striped uk-table-divider">
             <tbody>
                 <?php $i=1; foreach ($this->products as $key_id=>$prod) {
-    echo $prod['_tmp_tr_before']; ?>
+                echo $prod['_tmp_tr_before']; ?>
                 <tr>
                     <td>
                         <div class="tm-grid-expand uk-grid-row-small uk-grid-divider uk-grid-margin-small uk-grid" uk-grid>
@@ -22,10 +22,10 @@ defined('_JEXEC') or die();
                                         <div class="uk-width-2-5@m">
                                             <a class="" href="<?php print $prod['href']; ?>">
                                                 <img src="<?php print $this->image_product_path ?>/<?php if ($prod['thumb_image']) {
-        print $prod['thumb_image'];
-    } else {
-        print $this->no_image;
-    } ?>" alt="<?php print htmlspecialchars($prod['product_name']); ?>" />
+                                                    print $prod['thumb_image'];
+                                                } else {
+                                                    print $this->no_image;
+                                                } ?>" alt="<?php print htmlspecialchars($prod['product_name']); ?>" />
                                             </a>
                                         </div>
 
@@ -130,8 +130,8 @@ defined('_JEXEC') or die();
                 </tr>
             </tbody>
             <?php echo $prod['_tmp_tr_after'];
-    $i++;
-} ?>
+            $i++;
+        } ?>
         </table>
     </div>
 </div>
@@ -145,9 +145,9 @@ defined('_JEXEC') or die();
                 <div class="uk-flex uk-flex-right">
                     <ul class="uk-list">
                         <?php if ($this->config->show_weight_order) {?>
-                        <li class="el-item uk-margin-bottom">
+                        <li class="el-item uk-margin-bottom uk-text-meta">
                             <div class="uk-child-width-expand uk-grid-small uk-grid uk-text-muted" uk-grid>
-                                <div class="uk-width-small uk-text-break">
+                                <div class="uk-width-medium uk-text-break">
                                     <div class="el-title uk-margin-remove">
                                         <?php print JText::_('JSHOP_WEIGHT_PRODUCTS')?>:
                                     </div>
@@ -160,9 +160,9 @@ defined('_JEXEC') or die();
                         <?php } ?>
 
                         <?php if (!$this->hide_subtotal) {?>
-                        <li class="el-item">
+                        <li class="el-item uk-margin-small-bottom">
                             <div class="uk-child-width-expand uk-grid-small uk-grid" uk-grid>
-                                <div class="uk-width-small uk-text-break">
+                                <div class="uk-width-medium uk-text-break">
                                     <div class="el-title uk-margin-remove">
                                         <?php print JText::_('JSHOP_SUBTOTAL')?>
                                     </div>
@@ -178,9 +178,9 @@ defined('_JEXEC') or die();
                         <?php print $this->_tmp_html_after_subtotal?>
 
                         <?php if ($this->discount > 0) { ?>
-                        <li class="el-item">
+                        <li class="el-item uk-margin-remove-top uk-text-meta">
                             <div class="uk-child-width-expand uk-grid-small uk-grid" uk-grid>
-                                <div class="uk-width-small uk-text-break">
+                                <div class="uk-width-medium uk-text-break">
                                     <div class="el-title uk-margin-remove">
                                         <?php print JText::_('JSHOP_RABATT_VALUE')?>
                                         <?php print $this->_tmp_ext_discount_text?>
@@ -195,9 +195,9 @@ defined('_JEXEC') or die();
                         <?php } ?>
 
                         <?php if (isset($this->summ_delivery)) {?>
-                        <li class="el-item">
+                        <li class="el-item uk-margin-remove-top uk-text-meta">
                             <div class="uk-child-width-expand uk-grid-small uk-grid" uk-grid>
-                                <div class="uk-width-small uk-text-break">
+                                <div class="uk-width-medium uk-text-break">
                                     <div class="el-title uk-margin-remove">
                                         <?php print JText::_('JSHOP_SHIPPING_PRICE')?>
                                     </div>
@@ -211,9 +211,9 @@ defined('_JEXEC') or die();
                         <?php } ?>
 
                         <?php if (isset($this->summ_package)) {?>
-                        <li class="el-item">
+                        <li class="el-item uk-margin-remove-top uk-text-meta">
                             <div class="uk-child-width-expand uk-grid-small uk-grid" uk-grid>
-                                <div class="uk-width-small uk-text-break">
+                                <div class="uk-width-medium uk-text-break">
                                     <div class="el-title uk-margin-remove">
                                         <?php print JText::_('JSHOP_PACKAGE_PRICE')?>
                                     </div>
@@ -227,9 +227,9 @@ defined('_JEXEC') or die();
                         <?php } ?>
 
                         <?php if ($this->summ_payment != 0) { ?>
-                        <li class="el-item">
+                        <li class="el-item uk-margin-remove-top uk-text-meta">
                             <div class="uk-child-width-expand uk-grid-small uk-grid" uk-grid>
-                                <div class="uk-width-small uk-text-break">
+                                <div class="uk-width-medium uk-text-break">
                                     <div class="el-title uk-margin-remove">
                                         <?php print $this->payment_name;?>
                                     </div>
@@ -244,9 +244,9 @@ defined('_JEXEC') or die();
 
                         <?php if (!$this->config->hide_tax) { ?>
                         <?php foreach ($this->tax_list as $percent=>$value) {?>
-                        <li class="el-item">
+                        <li class="el-item uk-margin-remove-top uk-text-meta">
                             <div class="uk-child-width-expand uk-grid-small uk-grid" uk-grid>
-                                <div class="uk-width-small uk-text-break">
+                                <div class="uk-width-medium uk-text-break">
                                     <div class="el-title uk-margin-remove">
                                         <?php print \JSHelper::displayTotalCartTaxName();?>
                                         <?php
@@ -264,9 +264,9 @@ defined('_JEXEC') or die();
                         <?php } ?>
                         <?php } ?>
 
-                        <li class="el-item">
+                        <li class="el-item uk-margin-small-top uk-h4">
                             <div class="uk-child-width-expand uk-grid-small uk-grid" uk-grid>
-                                <div class="uk-width-small uk-text-break">
+                                <div class="uk-width-medium uk-text-break">
                                     <div class="el-title uk-margin-remove">
                                         <?php print $this->text_total; ?>
                                     </div>
@@ -281,9 +281,9 @@ defined('_JEXEC') or die();
                         <?php print $this->_tmp_html_after_total?>
 
                         <?php if ($this->free_discount > 0) {?>
-                        <li class="el-item">
+                        <li class="el-item uk-margin-small-top">
                             <div class="uk-child-width-expand uk-grid-small uk-grid" uk-grid>
-                                <div class="uk-width-small uk-text-break">
+                                <div class="uk-width-medium uk-text-break">
                                     <div class="el-title uk-margin-remove">
                                         <?php print JText::_('JSHOP_FREE_DISCOUNT')?>:
                                     </div>
