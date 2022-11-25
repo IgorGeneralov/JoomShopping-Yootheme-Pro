@@ -25,32 +25,32 @@ defined('_JEXEC') or die;
                         <div>
                             <div class="el-content uk-panel">
                                 <?php if ($this->invoice_info['firma_name']) {
-    print $this->invoice_info['firma_name'].", ";
-}?>
+                                    print $this->invoice_info['firma_name'].", ";
+                                }?>
                                 <?php print $this->invoice_info['f_name'] ?>
                                 <?php print $this->invoice_info['l_name'] ?>,
                                 <?php if ($this->invoice_info['street'] && $this->invoice_info['street_nr']) {
-    print $this->invoice_info['street']." ".$this->invoice_info['street_nr'].",";
-}?>
+                                    print $this->invoice_info['street']." ".$this->invoice_info['street_nr'].",";
+                                }?>
                                 <?php if ($this->invoice_info['street'] && !$this->invoice_info['street_nr']) {
-    print $this->invoice_info['street'].",";
-}?>
+                                    print $this->invoice_info['street'].",";
+                                }?>
                                 <?php if ($this->invoice_info['home'] && $this->invoice_info['apartment']) {
-    print $this->invoice_info['home']."/".$this->invoice_info['apartment'].",";
-}?>
+                                    print $this->invoice_info['home']."/".$this->invoice_info['apartment'].",";
+                                }?>
                                 <?php if ($this->invoice_info['home'] && !$this->invoice_info['apartment']) {
-    print $this->invoice_info['home'].",";
-}?>
+                                    print $this->invoice_info['home'].",";
+                                }?>
                                 <?php if ($this->invoice_info['state']) {
-    print $this->invoice_info['state'].",";
-} ?>
+                                    print $this->invoice_info['state'].",";
+                                } ?>
                                 <?php print $this->invoice_info['zip']." ".$this->invoice_info['city']." ".$this->invoice_info['country']?>
                                 <?php if ($this->invoice_info['email'] && $this->config->checkout_step5_show_email) {
-    print $this->invoice_info['email'];
-}?>
+                                    print $this->invoice_info['email'];
+                                }?>
                                 <?php if ($this->invoice_info['phone'] && $this->config->checkout_step5_show_phone) {
-    print $this->invoice_info['phone'];
-}?>
+                                    print $this->invoice_info['phone'];
+                                }?>
                             </div>
                         </div>
                     </div>
@@ -64,25 +64,25 @@ defined('_JEXEC') or die;
                                 <strong><?php print JText::_('JSHOP_FINISH_DELIVERY_ADRESS')?></strong>:
                                 <span>
                                     <?php if ($this->delivery_info['firma_name']) {
-    print $this->delivery_info['firma_name'].", ";
-}?>
+                                        print $this->delivery_info['firma_name'].", ";
+                                    }?>
                                     <?php print $this->delivery_info['f_name'] ?>
                                     <?php print $this->delivery_info['l_name'] ?>,
                                     <?php if ($this->delivery_info['street'] && $this->delivery_info['street_nr']) {
-    print $this->delivery_info['street']." ".$this->delivery_info['street_nr'].",";
-}?>
+                                        print $this->delivery_info['street']." ".$this->delivery_info['street_nr'].",";
+                                    }?>
                                     <?php if ($this->delivery_info['street'] && !$this->delivery_info['street_nr']) {
-    print $this->delivery_info['street'].",";
-}?>
+                                        print $this->delivery_info['street'].",";
+                                    }?>
                                     <?php if ($this->delivery_info['home'] && $this->delivery_info['apartment']) {
-    print $this->delivery_info['home']."/".$this->delivery_info['apartment'].",";
-}?>
+                                        print $this->delivery_info['home']."/".$this->delivery_info['apartment'].",";
+                                    }?>
                                     <?php if ($this->delivery_info['home'] && !$this->delivery_info['apartment']) {
-    print $this->delivery_info['home'].",";
-}?>
+                                        print $this->delivery_info['home'].",";
+                                    }?>
                                     <?php if ($this->delivery_info['state']) {
-    print $this->delivery_info['state'].",";
-} ?>
+                                        print $this->delivery_info['state'].",";
+                                    } ?>
                                     <?php print $this->delivery_info['zip']." ".$this->delivery_info['city']." ".$this->delivery_info['country']?>
                                 </span>
                             </div>
@@ -134,12 +134,15 @@ defined('_JEXEC') or die;
     <div class="uk-width-1-3@m">
         <form name="form_finish" action="<?php print $this->action ?>" method="post" enctype="multipart/form-data">
             <div class="uk-margin">
-                <textarea class="uk-textarea" id="order_add_info" name="order_add_info" placeholder="<?php print JText::_('JSHOP_ADD_INFO')?>" uk-icon="icon: pencil"></textarea>
+                <textarea class="uk-textarea" id="order_add_info" name="order_add_info" rows="5" placeholder="<?php print JText::_('JSHOP_ADD_INFO')?>" uk-icon="icon: pencil"></textarea>
             </div>
 
             <?php if ($this->config->display_agb) {?>
             <div class="">
-                <input type="uk-checkbox" name="agb" id="agb" class="uk-margin-small-right" />
+                <input type="uk-checkbox" name="agb" id="agb" type="checkbox" class="uk-margin-small-right" />
+                <span class="uk-text-small ">
+                    <?php print JText::_('JSHOP_CONFIRM')?>
+                </span>
                 <a class="uk-button uk-text-small uk-button-link" href="#" onclick="window.open('<?php print \JSHelper::SEFLink('index.php?option=com_jshopping&controller=content&task=view&page=agb&tmpl=component', 1);?>','window','width=800, height=600, scrollbars=yes, status=no, toolbar=no, menubar=no, resizable=yes, location=no');return false;">
                     <?php print JText::_('JSHOP_AGB')?>
                 </a>
@@ -148,10 +151,7 @@ defined('_JEXEC') or die;
                 </span>
                 <a class="uk-button uk-text-small uk-button-link" href="#" onclick="window.open('<?php print \JSHelper::SEFLink('index.php?option=com_jshopping&controller=content&task=view&page=return_policy&tmpl=component&cart=1', 1);?>','window','width=800, height=600, scrollbars=yes, status=no, toolbar=no, menubar=no, resizable=yes, location=no');return false;">
                     <?php print JText::_('JSHOP_RETURN_POLICY')?>
-                </a>
-                <span class="uk-text-small ">
-                    <?php print JText::_('JSHOP_CONFIRM')?>
-                </span>
+                </a>                
             </div>
             <?php }?>
 
