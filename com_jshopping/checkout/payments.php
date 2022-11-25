@@ -22,7 +22,7 @@ defined('_JEXEC') or die();
                     <input type="radio" class="uk-radio" name="payment_method" id="payment_method_<?php print $payment->payment_id?>" value="<?php print $payment->payment_class?>" <?php if ($this->active_payment==$payment->payment_id) {?>checked<?php } ?>>
                     <span for="payment_method_<?php print $payment->payment_id ?>" class="uk-margin uk-margin-left">
                         <?php if ($payment->image) {?>
-                        <span class="">
+                        <span class="tm-payment-img">
                             <img src="<?php print $payment->image?>" alt="<?php print htmlspecialchars($payment->name)?>" />
                         </span>
                         <?php }?>
