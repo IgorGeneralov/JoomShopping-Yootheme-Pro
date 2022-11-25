@@ -16,3 +16,6 @@
 
 .tm-image-card {min-height: 140px;}
 .tm-image-product {height: 200px;}
+
+.tm-payment-img img{width: 30px;}
+.tm-payment-shipping img{width: 140px;}
