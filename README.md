@@ -1,5 +1,6 @@
 # JoomShopping 5 и YOOtheme Pro (Joomla 4)
 Темплейт магазина JoomShopping (Joomla), адаптированный для конструктора YOOtheme Pro. В качестве **основы** был использован стандартный темплейт JoomShopping.
+### --> Шаблон магазина для JoomShopping-5 (Joomla 5) доступен по ссылке: [**shop.generalov.net**](https://shop.generalov.net/joomshopping/joomshooping-yootheme-template)
 ## Содержание
 ### com_jshopping
 Все файлы темплейта переписаны с использованием стилей и модулей YOOtheme Pro:
